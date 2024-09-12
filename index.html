@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Edotor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofadi+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="titre">
+            <h2>Éditeur d'images intélligent</h2>
+        </div>
+        <div class="all">
+            
+            <div>
+        
+                <div class="filtres">
+                    <div class="filtre-titre">
+                        <p>Filtres</p>
+                    </div>
+        
+                    <div class="mes-filtres">
+                        <div class="lumino-saturo">
+                            <div class="luminosite">
+                                <input type="button" value="Luminosité" id="luminosite">
+                            </div>
+                            <div class="saturation">
+                                <input type="button" value="Saturation" id="saturation">
+                            </div>
+                        </div>
+                        <div class="inverso-Niveau">
+                            <div class="inversion">
+                                <input type="button" value="Inversion" id="inversion">
+                            </div>
+                            <div class="Niveaux-gris">
+                                <input type="button" value="Niveaux de gris" id="niveau-gris">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="range-luminosite">
+                        <div class="range-luminosite-titre">
+                            <p id="fiter-name">Luminosité</p>
+                            <span class="percent">100%</span>
+                        </div>
+                        <div class="range-luminosite-input">
+                            <input type="range" name="range-luminosite" id="range" min="0" max="200" value="100">
+                        </div>
+                    </div>
+        
+                    <div class="rotation">
+
+                        <div class="rotation-titre">
+                            <p>Rotation et retourement</p>
+                        </div>
+                        <div class="rotation-button">
+                            <div class="left-rotation">
+                                <button id="left-rotation"><i class="fa-solid fa-rotate-left" style="color: #77767b;"></i></button>
+                            </div>
+            
+                            <div class="right-rotation">
+                                <button id="right-rotation"><i class="fa-solid fa-rotate-right" style="color: #77767b;"></i></button>
+                            </div> 
+            
+                            <div class="left-reflect">
+                                <button id="left-reflect"><i class="bx bx-reflect-vertical" style="color: #77767b;"></i></button>
+                            </div> 
+            
+                            <div class="right-reflect">
+                                <button id="right-reflect"><i class="bx bx-reflect-horizontal" style="color: #77767b;"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reset">
+                    <input type="button" value="filtres reset" id="reset">
+                </div>
+            </div>
+    
+    
+            <div>
+                <div class="image-container">
+                    <img src="placeholder.png" alt="" id="selected-image">
+                </div>
+                <div class="image-input">
+                    <div class="file-input">
+                        <label for="file">choisissez une image</label>
+                        <input type="file" name="file" id="file" accept="image/jpeg , image/png, image/jpg">
+                    </div>
+                    <div class="saved-image">
+                        <input type="button" value="enregistrer l'image" id="save-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

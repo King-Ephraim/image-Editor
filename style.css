@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(94, 241, 241);
+    color: #000000;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+.all{
+    display: flex;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 15px;
+    border: 2px solid #f8f8f8;
+    border-radius: 5px;
+    background:#fff ;
+    box-shadow: 5px 5px 5px rgba(43, 43, 43, 0.5);
+    
+}
+
+.container .titre{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+.container .titre h2{
+    text-align: center;
+}
+.filtres {
+    border: 2px solid gray;
+    border-radius: 3px;
+    padding: 16px 15px;
+    background-color: #fff;
+    display: inline-block;
+    margin: 10px 20px;
+}
+.filtres .filtre-titre p{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: 500;
+}
+.filtres input{
+    padding: 12px 18px;
+    color: rgba(128, 128, 128, 0.884);
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.filtres input:focus{
+    background-color:#664aff;
+    color: #fff;
+    font-weight: 600;
+}   
+#luminosite.active{
+    background-color:#664aff;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+#saturation.active{
+    background-color:#664aff;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+#inversion.active{
+    background-color:#664aff;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+#niveau-gris.active{
+    background-color:#664aff;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.filtres .lumino-saturo,.inverso-Niveau{
+    display: flex;
+    gap: 10px;
+    margin: 8px 0;
+}
+.filtres .inversion input{
+    padding: 10px 24.5px;
+}
+.filtres .Niveaux-gris input{
+    padding: 10px 3px;
+    font-size: 15px;
+}
+.range-luminosite .range-luminosite-titre{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.range-luminosite .range-luminosite-titre p,span{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.range-luminosite .range-luminosite-input input[type="range"]{
+    -webkit-appearance: none;
+    appearance:none;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    outline: none;
+    border:1px dashed rgba(128, 128, 128, 0.884);
+    border-radius: 120px;
+    
+}
+
+.range-luminosite .range-luminosite-input input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background:#664aff ;
+    cursor: pointer;
+}
+
+.rotation{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+    width: 100%;
+}
+.rotation .rotation-titre p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.rotation .rotation-button{
+    display: flex;
+    justify-content: space-between;
+}
+.rotation button{
+    padding:10px 20px ;
+    border-radius: 4px;
+    outline: none;
+    border: 0.5px solid rgba(128, 128, 128, 0.884);
+}
+.reset{
+    margin: 10px 20px;
+    margin-top: 27px;
+}
+.reset input{
+    padding: 13px 13px;
+    text-transform: uppercase;
+    color:rgba(128, 128, 128, 0.884);
+    font-weight: 600;
+}
+
+.image-container{
+    height: 330px;
+    width: 500px;
+    margin: 0 20px;
+    margin-top: 10px;
+    overflow: hidden;
+    background: transparent;
+}
+.image-container img{
+    width: 500px;
+    height: 330px;
+    border-radius: 5px;
+}
+.image-input{
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-around;
+    gap: 60px;
+}
+.file-input input[type="file"]{
+    display: none;
+}
+.file-input label{
+    padding: 12px 13px;
+    text-transform: uppercase;
+    color:#fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: 0.5px solid rgba(128, 128, 128, 0.884);
+    background-color: rgb(26, 24, 24);
+    border-radius: 3px;
+}
+.saved-image input{
+    padding: 15px 15px;
+    text-transform: uppercase;
+    background: #664aff;
+    color:#fff;
+    font-weight: 600;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    margin-top: -10px;
+}
